@@ -7,16 +7,12 @@ namespace RockPaperScissors
         static void Main(string[] args)
         {
             Random random = new Random();  //Creates a new random//
-            bool playAgain = true;  //Creates a new boolean value and makes it true//
-            String Player;  //Creates a new string called player and doesn't give it a value//
-            String Computer;  //Creates a new string called Computer and doesn't give it a value//
-            String Answer;  //Creates a new string called Answer and doesn't give it a value//
 
-            while (playAgain)  //Only executes while playAgain is true//
+            while (true)  //Only executes while playAgain is true//
             {
-                Player = "";  //Makes the string Player ""//
-                Computer = "";  //Makes the string Computer ""//
-                Answer = "";  //Makes the string Answer ""//
+                String Player = "";  //Makes the string Player ""//
+                String Computer = "";  //Makes the string Computer ""//
+                String Answer = "";  //Makes the string Answer ""//
 
                 while (Player != "ROCK" && Player != "PAPER" && Player != "SCISSORS")  //Only executes when Player is either ROCK, PAPER or SCISSORS//
                 {
@@ -104,12 +100,12 @@ namespace RockPaperScissors
 
                 if (Answer == "Y")  //Only executes if answer is Y//
                 {
-                    playAgain = true;  //Keeps playAgain as true//
+                    continue;
                 }
 
                 else if (Answer == "N")  //Only executes if answer is N//
                 {
-                    playAgain = false;  //Changes playAgain to false//
+                    break;
                 }
 
             }
